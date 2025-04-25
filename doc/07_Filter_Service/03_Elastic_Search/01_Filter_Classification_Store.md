@@ -66,12 +66,12 @@ This contains all the classification store IDs as well as all the data.
 To interpret the indexed data correctly, a special filter type is needed. As this filter type works only in combination 
 with elasticsearch, it is not activated by default. Following steps are necessary to activate it: 
 
-- make sure the field collection `FilteSelectClsStoreAttributes` is installed and is allowed in the filter list of
+- make sure the field collection `FilterSelectClsStoreAttributes` is installed and is allowed in the filter list of
   the filter definition class.  
 - add following filter type mapping (see [here](../README.md) for details):
 
 ```yml
-FilteSelectClsStoreAttributes:
+FilterSelectClsStoreAttributes:
     filter_type_id: Pimcore\Bundle\EcommerceFrameworkBundle\FilterService\FilterType\ElasticSearch\SelectClassificationStoreAttributes
     template: 'product/filters/nested_attributes.html.twig'
 ```
